@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="loginregistercss.css">
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      $document.ready(function() {
+        $("#container").validate({
+          rules: {
+            name: {
+              required: true,
+              minlength: "Name should be at least 3 characters",
+            },
+          },
+          surname: {
+            required: true,
+            min: "Surname should be at least 3 characters",
+          },
+          email: {
+            required: true,
+            email: "The email should be in format: abc@domain.tld",
+          },
+          phonenumber: {
+            required: true,
+            number: "Your phone number should be in a numerical value",
+          },
+          password: {
+            required: true,
+            minlength: "Password must be at least 5 characters.",
+          },
+          }),
+
+          function register(){
+            alert("You are logged in");
+        }
+      });
+
+    </script>
+</head>
+<body>
+    <div class="head">
+        <h1><b>iGaming.com</b></h1>
+    </div>
+    <div class="topnav">
+        <a class="active" href="http://127.0.0.1:5500/home.html">Home</a>
+        <a href="http://127.0.0.1:5500/aboutus.html">About Us</a>
+        <a href="http://127.0.0.1:5500/contactus.html">Contact Us</a>
+        <a href="http://127.0.0.1:5500/games.html">Games</a>
+        <a href="#login/register"> Login/Register </a>
+    </div>
+    <form action="action_page.php" method="post">
+      
+        <div class="container">
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="name" required>
+           
+          <label for="surname"><b>Surname</b></label>
+          <input type="text" placeholder="Enter Surname" name="surname" required>
+
+          <label for="phonenumber"><b>Phone Number</b></label>
+          <input type="text" placeholder="Enter Phone Number" name="phonenumber" required>
+
+          <label for="uname"><b>Email Address</b></label>
+          <input type="text" placeholder="Enter Email Address" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <input type="submit" value="Register" onclick="register()"> Register       
+          <label>
+           <input type="checkbox" checked="checked" name="remember"> Remember me
+           <br>
+            <input type="checkbox" checked="checked" name="over18"> I confirm that I am 18 years old or older
+            <br>
+            <input type="checkbox" checked="checked" name="termsnconditions"> I consent to the terms and conditions.
+          </label>
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn"> Cancel</button>
+        </div> 
+      </form>
+</body>
+</html>
