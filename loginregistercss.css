@@ -28,7 +28,7 @@
     color:#f2f2f2;
 }
 
-form {
+.container {
     border: 3px solid #f1f1f1;
     width:30%;
     float:right;
@@ -37,7 +37,7 @@ form {
     font-family:Arial, Helvetica, sans-serif;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email], input[type=number] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -64,12 +64,6 @@ button:hover {
     background-color:rgb(49, 107, 214);
 }
   
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-  
  
 span.psw {
     float: right;
@@ -85,4 +79,19 @@ span.psw {
     .cancelbtn {
       width: 100%;
     }
+}
+
+.register {
+    background-color:#256DF8;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.register:hover{
+    background-color:#2550F8;
 }
