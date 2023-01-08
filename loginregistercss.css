@@ -95,3 +95,11 @@ span.psw {
 .register:hover{
     background-color:#2550F8;
 }
+
+@media screen and (max-width: 600px) {
+    .container {
+        position:fixed;
+        width:100%;
+        height:fit-content;
+    }
+}
